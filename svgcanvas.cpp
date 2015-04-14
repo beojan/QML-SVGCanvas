@@ -5,7 +5,8 @@ SVGCanvas::SVGCanvas(QQuickItem *parent):
     QQuickPaintedItem(parent)
 {
     this->m_renderer = new QSvgRenderer(m_content, this);
-    connect(m_renderer, "repaintNeeded", this, "repaint");
+    this->m_renderer->setFramesPerSecond(60);
+    connect(m_renderer, SIGNAL(repaintNeeded()), this, SLOT(repaint()));
 }
 
 QString SVGCanvas::content() const
