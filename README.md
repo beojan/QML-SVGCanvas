@@ -1,7 +1,7 @@
 # QML-SVGCanvas
 SVG Canvas for QML
 
-Use like
+Use like so:
 ```[qml]
 import SvgCanvas 1.0
 
